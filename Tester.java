@@ -35,23 +35,23 @@ public class Tester{
 		}
 		System.out.println();
 
-	// sumRows and largestInRows test:
+	// sumRows, largestInRows, and sum (overload) test:
 
 		int[][] test = new int[3][5];
-		for(int i = 1; i <= 6; i++){
-			if(i == 1 || i - 3 == 1){
+		for(int i = 1; i <= 9; i++){
+			if((i + 2) % 3 == 0){
 				test = new int[][] { { 3, -5, 4, 8, 10 },
 						     { -5, 84, 1, -56, 20 },
 						     { 4, 38, -23, -25, -5 }
 					      	   };
 			}
-			if(i == 2 || i - 3 == 2){
+			if((i + 1) % 3 == 0){
 				test = new int[][] { { 80, 12, 34, -26, 7 },
 						     { -12, -45, 50, -33, -8 },
 						     { 45, 3, 21, -84, 2 }
 					    	   };
 			}
-			if(i == 3 || i - 3 == 3){
+			if(i % 3 == 0){
 				test = new int[][] { { 23, 12, 18, 45, -52 },
 						     { -90, 88, 45, -57, 2 },
 						     { 23, 45, -45, -24, 6 }
@@ -59,10 +59,15 @@ public class Tester{
 			}
 			if(i < 4)
 				System.out.println(Arrays.toString(ArrayOps.sumRows(test)));
-			else{
+			else if(i < 7){
 				if(i == 4)
 					System.out.println();
 				System.out.println(Arrays.toString(ArrayOps.largestInRows(test)));
+			}
+			else{
+				if(i == 7)
+					System.out.println();
+				System.out.println(ArrayOps.sum(test));
 			}
 		}
 			
