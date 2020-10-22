@@ -35,28 +35,36 @@ public class Tester{
 		}
 		System.out.println();
 
-	// sumRows test:
+	// sumRows and largestInRows test:
 
-		int[][] sumRowstest = new int[3][5];
-		for(int i = 1; i <= 3; i++){
-			if(i == 1){
-				sumRowstest = new int[][] { { 3, -5, 4, 8, 10 },
-						{ -5, 84, 1, -56, 20 },
-						{ 4, 38, -23, -25, -5 }
-					      };
+		int[][] test = new int[3][5];
+		for(int i = 1; i <= 6; i++){
+			if(i == 1 || i - 3 == 1){
+				test = new int[][] { { 3, -5, 4, 8, 10 },
+						     { -5, 84, 1, -56, 20 },
+						     { 4, 38, -23, -25, -5 }
+					      	   };
 			}
-			if(i == 2){
-				sumRowstest = new int[][] { { 80, 12, 34, -26, 7 },
-						{ -12, -45, 50, -33, -8 }
-					      };
+			if(i == 2 || i - 3 == 2){
+				test = new int[][] { { 80, 12, 34, -26, 7 },
+						     { -12, -45, 50, -33, -8 },
+						     { 45, 3, 21, -84, 2 }
+					    	   };
 			}
-			if(i == 3){
-				sumRowstest = new int[][] { { 23, 12, 18, 45, -52 },
-						{ -90, 88, 45, -57, 2 },
-						{ 23, 45, -45, -24, 6 }
-					      };
+			if(i == 3 || i - 3 == 3){
+				test = new int[][] { { 23, 12, 18, 45, -52 },
+						     { -90, 88, 45, -57, 2 },
+						     { 23, 45, -45, -24, 6 }
+					           };
 			}
-			System.out.println(Arrays.toString(ArrayOps.sumRows(sumRowstest)));
+			if(i < 4)
+				System.out.println(Arrays.toString(ArrayOps.sumRows(test)));
+			else{
+				if(i == 4)
+					System.out.println();
+				System.out.println(Arrays.toString(ArrayOps.largestInRows(test)));
+			}
 		}
+			
 	}
 }
