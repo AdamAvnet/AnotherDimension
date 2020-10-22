@@ -7,6 +7,7 @@ public class Tester{
 
 	// sum test:
 
+		System.out.println("sum test");
 		int[] sumtest = new int[5];
 		for(int i = 1; i <= 4; i++){
 			if(i == 1)
@@ -23,6 +24,7 @@ public class Tester{
 
 	// largest test:
 
+		System.out.println("largest test");
 		int[] bigtest = new int[10];
 		for(int i = 1; i < 4; i++){
 			if(i == 1)
@@ -38,7 +40,7 @@ public class Tester{
 	// sumRows, largestInRows, and sum (overload) test:
 
 		int[][] test = new int[3][5];
-		for(int i = 1; i <= 9; i++){
+		for(int i = 1; i <= 12; i++){
 			if((i + 2) % 3 == 0){
 				test = new int[][] { { 3, -5, 4, 8, 10 },
 						     { -5, 84, 1, -56, 20 },
@@ -57,19 +59,26 @@ public class Tester{
 						     { 23, 45, -45, -24, 6 }
 					           };
 			}
-			if(i < 4)
+			if(i < 4){
+				if(i == 1)
+					System.out.println("sumRows test");
 				System.out.println(Arrays.toString(ArrayOps.sumRows(test)));
+			}
 			else if(i < 7){
 				if(i == 4)
-					System.out.println();
+					System.out.println("\nlargestInRows test");
 				System.out.println(Arrays.toString(ArrayOps.largestInRows(test)));
 			}
-			else{
+			else if(i < 10){
 				if(i == 7)
-					System.out.println();
+					System.out.println("\nsum(overloaded) test");
 				System.out.println(ArrayOps.sum(test));
 			}
-		}
-			
+			else{
+				if(i == 10)
+					System.out.println("\nsumCols test");
+				System.out.println(Arrays.toString(ArrayOps.sumCols(test)));
+			}
+		}	
 	}
 }
