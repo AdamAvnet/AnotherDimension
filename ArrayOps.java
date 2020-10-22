@@ -52,6 +52,7 @@ public class ArrayOps{
 					total += matrix[i][index];
 			}
 		}
+		arr[index] = total;
 		return arr;
 	}
 				
