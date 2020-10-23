@@ -79,6 +79,38 @@ public class Tester{
 					System.out.println("\nsumCols test");
 				System.out.println(Arrays.toString(ArrayOps.sumCols(test)));
 			}
-		}	
+		}
+
+		System.out.println();
+		System.out.println("isRowMagic test");
+		for(int i = 0; i < 6; i++){
+			if(i % 3 == 0){
+				test = new int[][] { { 3, 4, 6, 8, 1 },
+						     { 7, 3, 5, 8, -1 },
+						     { 23, 2, 5, -3, -5 }
+						   };
+			}
+			if(i % 3 == 1){
+				test = new int[][] { { 5, 6, -3, 23, 19 },
+						     { 25, 75, -60, 8, 2 },
+						     { 10, -41, 103, 9, 19 }
+						   };
+			}
+			if(i % 3 == 2){
+				test = new int[][] { { 1, 2, 3, 4, 5 },
+						     { 5, 2, 4, 1, 3 },
+						     { 3, 5, 2, 4, 1 }
+						   };
+			}
+			if(i < 3)
+				System.out.println(ArrayOps.isRowMagic(test));
+			else{
+				if(i == 3){
+					System.out.println();
+					System.out.println("isColMagic test");
+				}
+				System.out.println(ArrayOps.isColMagic(test));
+			}
+		}
 	}
 }
