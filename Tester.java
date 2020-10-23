@@ -112,5 +112,16 @@ public class Tester{
 				System.out.println(ArrayOps.isColMagic(test));
 			}
 		}
+
+		System.out.println();
+		System.out.println("isLocationMagic test");
+		int[][] array = new int[3][3];
+		array = new int[][] { { 1, 6, 8 },
+				      { 5, 7, 7 },
+				      { 8, 3, 5 }
+				   };
+		System.out.println(ArrayOps.isLocationMagic(array, 1, 2));
+		System.out.println(ArrayOps.isLocationMagic(array, 0, 0));
+		System.out.println(ArrayOps.isLocationMagic(array, 2, 1));
 	}
 }

@@ -1,5 +1,4 @@
 public class ArrayOps{
-
 	
 	public static int sum(int[] arr) {
 		int total = 0;
@@ -76,6 +75,15 @@ public class ArrayOps{
 		arr = sumCols(matrix);
 		return isSame(arr);
 	}
-		
+	
+	public static boolean isLocationMagic(int[][] matrix, int row, int col) {
+		int rowsum = sum(matrix[row]);
+		int colsum = 0;
+		for(int i = 0; i < matrix.length; i++){
+			colsum += matrix[i][col];
+		}
+		return colsum == rowsum;
+	}
+					
 }
 			
